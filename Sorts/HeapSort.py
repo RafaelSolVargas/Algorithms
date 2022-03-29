@@ -1,12 +1,9 @@
-class HeapSort():
+class HeapSort:
     # Heap: Ordered Binary Tree
     # Max Heap: Parent > Child
     # array[(k-1)/2] -> Parent None of k
     # array[(2*k) + 1] -> Left Child of k
     # array[(2*k) + 2] -> Right Child of k
-    def __init__(self) -> None:
-        self.__nome = 'Heap'
-
     def order(self, array):
         lastParentIndex = len(array)-2//2
 
@@ -64,7 +61,13 @@ class HeapSort():
     # Então essa função recebe uma tree e transforma ela em um max heap
 
 
-insertion = HeapSort()
-lista = [2, 1, 4, 2, 1, 5, 2, 6, 3, 12, 2, 325, 235, 12, 2, 1, 56, 3]
-insertion.order(lista)
-print(lista)
+if __name__ == '__main__':
+    insertion = HeapSort()
+    lista = [2, 1, 4, 2, 1, 5, 2, 6, 3, 12, 2, 325, 235, 12, 2, 1, 56, 3]
+    insertion.order(lista)
+    last_value = lista[0]
+    for value in lista:
+        if value < last_value:
+            print(f'Code not working, {value}, {last_value}')
+        last_value = value
+    print(lista)

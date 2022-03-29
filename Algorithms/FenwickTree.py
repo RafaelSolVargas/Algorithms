@@ -58,37 +58,38 @@ class FenwickTree:
         return sum
 
 
-while True:
-    comprimento, largura, preco = list(map(int, input().split()))
+if __name__ == '__main__':
+    while True:
+        comprimento, largura, preco = list(map(int, input().split()))
 
-    if comprimento == largura == preco == 0:
-        break
+        if comprimento == largura == preco == 0:
+            break
 
-    quant_mensagens = int(input())
+        quant_mensagens = int(input())
 
-    fenwick = FenwickTree(comprimento, largura)
+        fenwick = FenwickTree(comprimento, largura)
 
-    for mensagem in range(quant_mensagens):
-        entrada = input().split()
+        for mensagem in range(quant_mensagens):
+            entrada = input().split()
 
-        if entrada[0] == 'A':
-            x = int(entrada[2])
-            y = int(entrada[3])
-            quant = int(entrada[1])
+            if entrada[0] == 'A':
+                x = int(entrada[2])
+                y = int(entrada[3])
+                quant = int(entrada[1])
 
-            fenwick.update(x, y, quant)
-        else:
-            a = int(entrada[1])
-            b = int(entrada[2])
-            c = int(entrada[3])
-            d = int(entrada[4])
+                fenwick.update(x, y, quant)
+            else:
+                a = int(entrada[1])
+                b = int(entrada[2])
+                c = int(entrada[3])
+                d = int(entrada[4])
 
-            if a > c:
-                a, c = c, a
-            if b > d:
-                b, d = d, b
+                if a > c:
+                    a, c = c, a
+                if b > d:
+                    b, d = d, b
 
-            soma = fenwick.getSumRect(a, b, c, d)
+                soma = fenwick.getSumRect(a, b, c, d)
 
-            print(soma * preco)
-    print()
+                print(soma * preco)
+        print()

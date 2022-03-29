@@ -144,23 +144,24 @@ class Dijkstra:
         return path
 
 
-graph = [
-    [0, 4, 0, 0, 0, 0, 0, 8, 0],
-    [0, 4, 0, 0, 0, 0, 0, 8, 0],
-    [4, 0, 8, 0, 0, 0, 0, 11, 0],
-    [0, 8, 0, 7, 0, 4, 0, 0, 2],
-    [0, 0, 7, 0, 9, 14, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 4, 14, 10, 0, 2, 0, 0],
-    [0, 0, 0, 0, 0, 2, 0, 1, 6],
-    [8, 11, 0, 0, 0, 0, 1, 0, 7],
-    [0, 0, 2, 0, 0, 0, 6, 7, 0]
-]
+if __name__ == '__main__':
+    graph = [
+        [0, 4, 0, 0, 0, 0, 0, 8, 0],
+        [0, 4, 0, 0, 0, 0, 0, 8, 0],
+        [4, 0, 8, 0, 0, 0, 0, 11, 0],
+        [0, 8, 0, 7, 0, 4, 0, 0, 2],
+        [0, 0, 7, 0, 9, 14, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 4, 14, 10, 0, 2, 0, 0],
+        [0, 0, 0, 0, 0, 2, 0, 1, 6],
+        [8, 11, 0, 0, 0, 0, 1, 0, 7],
+        [0, 0, 2, 0, 0, 0, 6, 7, 0]
+    ]
 
-djk2 = Dijkstra(graph)
-for x in range(len(graph)):
-    djk2.searchAll(x)
+    djk2 = Dijkstra(graph)
+    for x in range(len(graph)):
+        djk2.searchAll(x)
 
-for x in range(len(graph)):
-    for y in range(len(graph)):
-        djk2.searchPath(x, y)
+    for x in range(len(graph)):
+        for y in range(len(graph)):
+            djk2.searchPath(x, y)

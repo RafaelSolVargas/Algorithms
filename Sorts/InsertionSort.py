@@ -20,7 +20,13 @@ class Insertion():
         return lista
 
 
-insertion = Insertion()
-ordenada = insertion.order(
-    [2, 1, 4, 2, 1, 5, 2, 6, 3, 12, 2, 325, 235, 12, 2, 1, 56, 3])
-print(ordenada)
+if __name__ == '__main__':
+    insertion = Insertion()
+    ordenada = insertion.order(
+        [2, 1, 4, 2, 1, 5, 2, 6, 3, 12, 2, 325, 235, 12, 2, 1, 56, 3])
+    last_value = ordenada[0]
+    for value in ordenada:
+        if value < last_value:
+            print(f'Code not working, {value}, {last_value}')
+        last_value = value
+    print(ordenada)

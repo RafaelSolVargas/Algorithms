@@ -40,7 +40,13 @@ class Merge():
         return arrayThree
 
 
-insertion = Merge()
-ordenada = insertion.mergesort(
-    [2, 5, 4, 6, 8, 5, 3, 1, 2, 5, 3, 6, 34, 235, 345, 124, 3476, 1235, 12, 3, 2, 5, 2])
-print(ordenada)
+if __name__ == '__main__':
+    insertion = Merge()
+    ordenada = insertion.mergesort(
+        [2, 5, 4, 6, 8, 5, 3, 1, 2, 5, 3, 6, 34, 235, 345, 124, 3476, 1235, 12, 3, 2, 5, 2])
+    last_value = ordenada[0]
+    for value in ordenada:
+        if value < last_value:
+            print(f'Code not working, {value}, {last_value}')
+        last_value = value
+    print(ordenada)
