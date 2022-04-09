@@ -1,4 +1,4 @@
-class Node():
+class Node:
     def __init__(self, index, value) -> None:
         self.value = value
         self.index = index
@@ -16,7 +16,7 @@ class Node():
         return self.index * 2 + 2
 
 
-class MaxHeap():
+class MaxHeap:
     def __init__(self, array: list) -> None:
         self.heap = array
 

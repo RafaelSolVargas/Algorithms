@@ -30,6 +30,9 @@ class Stack:
         else:
             return False
 
+    def __len__(self) -> int:
+        return len(self.__stack)
+
 
 if __name__ == '__main__':
     stack = Stack()
